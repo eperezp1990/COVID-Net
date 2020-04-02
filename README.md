@@ -78,6 +78,7 @@ We especially thank the Radiological Society of North America and others involve
 4. We provide the train and test txt files with patientId, image path and label (normal, pneumonia or COVID-19). The description for each file is explained below:
  * [train\_COVIDx.txt](train_COVIDx.txt): This file contains the samples used for training.
  * [test\_COVIDx.txt](test_COVIDx.txt): This file contains the samples used for testing.
+5. Now you should have 2 dirs (train and test), optionally you can organize the images in folders accordingly classes using [notebooks/covidx\_setup\_classes.ipynb](covidx_setup_classes.ipynb) 
 
 ### COVIDx data distribution
 
