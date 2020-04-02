@@ -3,9 +3,9 @@
 **Note: The COVID-Net models provided here are intended to be used as reference models that can be built upon and enhanced as new data becomes available. They are currently at a research stage and not yet intended as production-ready models (not meant for direct clinicial diagnosis), and we are working continuously to improve them as new data becomes available. Please do not use COVID-Net for self-diagnosis and seek help from your local health authorities.**
 
 <p align="center">
-	<img src="assets/covidnet-small-exp.png" alt="photo not available" width="70%" height="70%">
-	<br>
-	<em>Example chest radiography images of COVID-19 cases from 2 different patients and their associated critical factors (highlighted in red) as identified by GSInquire.</em>
+  <img src="assets/covidnet-small-exp.png" alt="photo not available" width="70%" height="70%">
+  <br>
+  <em>Example chest radiography images of COVID-19 cases from 2 different patients and their associated critical factors (highlighted in red) as identified by GSInquire.</em>
 </p>
 
 **Core COVID-Net team: Linda Wang, Alexander Wong, Zhong Qiu Lin, James Lee, Paul McInnis**
@@ -14,18 +14,9 @@ The COVID-19 pandemic continues to have a devastating effect on the health and w
 
 For a detailed description of the methodology behind COVID-Net and a full description of the COVIDx dataset, please click [here](assets/COVID_Netv2.pdf).
 
-Currently, the COVID-Net team is working on COVID-RiskNet, a deep neural network tailored for COVID-19 risk stratification.  Stay tuned as we make it available soon.
-
-If you would like to contribute COVID-19 x-ray images, please contact us at linda.wang513@gmail.com and a28wong@uwaterloo.ca or alex@darwinai.ca. Lets all work together to stop the spread of COVID-19!
-
-If you are a researcher or healthcare worker and you would like access to the GSInquire tool to use to interpret COVID-Net results on your data or existing data, please reach out to a28wong@uwaterloo.ca or alex@darwinai.ca
-
-Our desire is to encourage broad adoption and contribution to this project. Accordingly this project has been licensed under the GNU Affero General Public License 3.0. Please see [license file](LICENSE.md) for terms. If you would like to discuss alternative licensing models, please reach out to us at: linda.wang513@gmail.com and a28wong@uwaterloo.ca or alex@darwinai.ca.
-
 If there are any technical questions, please contact:
-* desmond.zq.lin@gmail.com
-* paul@darwinai.ca
-* jamesrenhoulee@gmail.com
+* eduardo.perez@imibic.org
+* amoya@uco.es
 
 If you find our work useful, can cite our paper using:
 
@@ -94,6 +85,21 @@ Patients distribution
 | train |  7966  |    5429   |    48    |  13443 |
 |  test |   100  |      97   |     5    |    202 |
 
+## Chest X-Ray Images (Pneumonia)
+
+You can download this dataset from kaggle:
+* https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
+
+### Steps to generate the dataset
+
+1. Download the datasets listed above
+ * https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
+2. You will see three folders: train, test and val. This folders contain images of two types: NORMAL and PNEUMONIA. 
+3. Use  to divide PNEUMONIA folder into two folders: pneumonia-virus and pneumonia-bacteria. It will be done for train, test and val folders. 
+
+### Chest X-Ray Images (Pneumonia) data distribution
+
+
 ## Training and Evaluation
 The network takes as input an image of shape (N, 224, 224, 3) and outputs the softmax probabilities as (N, 3), where N is the number of batches.
 If using the TF checkpoints, here are some useful tensors:
@@ -132,9 +138,9 @@ These are the final results for COVID-Net Small and COVID-Net Large.
 
 ### COVIDNet Small
 <p align="center">
-	<img src="assets/cm-covidnet-small.png" alt="photo not available" width="50%" height="50%">
-	<br>
-	<em>Confusion matrix for COVID-Net on the COVIDx test dataset.</em>
+  <img src="assets/cm-covidnet-small.png" alt="photo not available" width="50%" height="50%">
+  <br>
+  <em>Confusion matrix for COVID-Net on the COVIDx test dataset.</em>
 </p>
 
 <div class="tg-wrap" align="center"><table class="tg">
@@ -171,9 +177,9 @@ These are the final results for COVID-Net Small and COVID-Net Large.
 
 ### COVID-Net Large
 <p align="center">
-	<img src="assets/cm-covidnet-large.png" alt="photo not available" width="50%" height="50%">
-	<br>
-	<em>Confusion matrix for COVID-Net on the COVIDx test dataset.</em>
+  <img src="assets/cm-covidnet-large.png" alt="photo not available" width="50%" height="50%">
+  <br>
+  <em>Confusion matrix for COVID-Net on the COVIDx test dataset.</em>
 </p>
 
 <div class="tg-wrap" align="center"><table class="tg">
@@ -214,3 +220,5 @@ These are the final results for COVID-Net Small and COVID-Net Large.
 |:-----:|:--------------------:|:------------:|:--------:|:-------------------:|
 |  ckpt |         80.0         |     116.6    |   2.26   |[COVID-Net Small](https://drive.google.com/file/d/1xrxK9swFVlFI-WAYcccIgm0tt9RgawXD/view?usp=sharing)|
 |  ckpt |         90.0         |     126.6    |   3.59   |[COVID-Net Large](https://drive.google.com/file/d/1djqWcxzRehtyJV9EQsppj1YdgsP2JRQy/view?usp=sharing)|
+
+
