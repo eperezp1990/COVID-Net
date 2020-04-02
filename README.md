@@ -1,6 +1,6 @@
 # COVID-Net Open Source Initiative
 
-**Note: The COVID-Net models provided here are intended to be used as reference models that can be built upon and enhanced as new data becomes available. They are currently at a research stage and not yet intended as production-ready models (not meant for direct clinicial diagnosis), and we are working continuously to improve them as new data becomes available. Please do not use COVID-Net for self-diagnosis and seek help from your local health authorities.**
+**Note: The models provided here are intended to be used as reference models that can be built upon and enhanced as new data becomes available. They are currently at a research stage and not yet intended as production-ready models (not meant for direct clinicial diagnosis), and we are working continuously to improve them as new data becomes available. Please do not use it for self-diagnosis and seek help from your local health authorities.**
 
 <p align="center">
   <img src="assets/covidnet-small-exp.png" alt="photo not available" width="70%" height="70%">
@@ -8,28 +8,13 @@
   <em>Example chest radiography images of COVID-19 cases from 2 different patients and their associated critical factors (highlighted in red) as identified by GSInquire.</em>
 </p>
 
-**Core COVID-Net team: Linda Wang, Alexander Wong, Zhong Qiu Lin, James Lee, Paul McInnis**
-
-The COVID-19 pandemic continues to have a devastating effect on the health and well-being of the global population.  A critical step in the fight against COVID-19 is effective screening of infected patients, with one of the key screening approaches being radiological imaging using chest radiography.  It was found in early studies that patients present abnormalities in chest radiography images that are characteristic of those infected with COVID-19.  Motivated by this, a number of artificial intelligence (AI) systems based on deep learning have been proposed and results have been shown to be quite promising in terms of accuracy in detecting patients infected with COVID-19 using chest radiography images.  However, to the best of the authors' knowledge, these developed AI systems have been closed source and unavailable to the research community for deeper understanding and extension, and unavailable for public access and use.  Therefore, in this study we introduce COVID-Net, a deep convolutional neural network design tailored for the detection of COVID-19 cases from chest radiography images that is open source and available to the general public.  We also describe the chest radiography dataset leveraged to train COVID-Net, which we will refer to as COVIDx and is comprised of 16,756 chest radiography images across 13,645 patient cases from two open access data repositories.  Furthermore, we investigate how COVID-Net makes predictions using an explainability method in an attempt to gain deeper insights into critical factors associated with COVID cases, which can aid clinicians in improved screening. **By no means a production-ready solution**, the hope is that the open access COVID-Net, along with the description on constructing the open source COVIDx dataset, will be leveraged and build upon by both researchers and citizen data scientists alike to accelerate the development of highly accurate yet practical deep learning solutions for detecting COVID-19 cases and accelerate treatment of those who need it the most.
+This repo is an extension of [COVID-Net](https://github.com/lindawangg/COVID-Net), here you can find several data sets, as well as scripts for pre-processing and further training of artificial neural networks.
 
 For a detailed description of the methodology behind COVID-Net and a full description of the COVIDx dataset, please click [here](assets/COVID_Netv2.pdf).
 
 If there are any technical questions, please contact:
 * eduardo.perez@imibic.org
 * amoya@uco.es
-
-If you find our work useful, can cite our paper using:
-
-```
-@misc{wang2020covidnet,
-    title={COVID-Net: A Tailored Deep Convolutional Neural Network Design for Detection of COVID-19 Cases from Chest Radiography Images},
-    author={Linda Wang and Alexander Wong},
-    year={2020},
-    eprint={2003.09871},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
-}
-```
 
 ## Requirements
 
